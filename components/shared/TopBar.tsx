@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/dist/client/link";
 import { Image } from "next/dist/client/image-component";
 import { OrganizationSwitcher, SignOutButton, SignedIn } from "@clerk/nextjs";
@@ -18,25 +17,28 @@ function TopBar() {
         <div className="block md:hidden">
           <SignedIn>
             <SignOutButton>
-              <div className="flex cursor-pointer"></div>
-              <Image
-                src="/assets/logout.svg"
-                alt="logout"
-                width={24}
-                height={24}
-              />
+              <div className="flex cursor-pointer">
+                <Image
+                  src="/assets/logout.svg"
+                  alt="logout"
+                  width={24}
+                  height={24}
+                />
+              </div>  
             </SignOutButton>
           </SignedIn>
         </div>
 
         <OrganizationSwitcher
           appearance={{
-            elements: { OrganizationSwitchTrigger: "py-2 px-4" },
+            elements: {
+              organizationSwitcherTrigger: "py-2 px-4"
+            }
           }}
         />
       </div>
     </nav>
-  );
+  )
 }
 
 export default TopBar;

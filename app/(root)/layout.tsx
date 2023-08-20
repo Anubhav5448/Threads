@@ -26,10 +26,10 @@ export default function RootLayout({
         <TopBar />
         <main>
           <LeftSideBar/>
-          <section className='main-container'>
-            <div className='w-full max-w-4xl'></div>
+          <section className='main-container '>
+            <div className='w-full max-w-4xl'>
             {children}
-
+            </div>
           </section>
           <RightSideBar/>
         </main>
